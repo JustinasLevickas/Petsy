@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    <TextView
+        android:text="Seimininkas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seim"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/vieta" />
+
+    <TextView
+        android:text="Veisle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/veisle"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:layout_margin="10dp" />
+
+    <TextView
+        android:text="Amzius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/amzius"
+        android:layout_below="@+id/veisle"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:text="Lytis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lytis"
+        android:layout_below="@+id/amzius"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:layout_margin="10dp" />
+
+    <TextView
+        android:text="Vieta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/vieta"
+        android:layout_below="@+id/lytis"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:text="Įtrauktas į kontaktus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ar_draugas"
+        android:layout_below="@+id/seim"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:layout_margin="10dp" />
+
+    <Button
+        android:text="Pridėti prie kontaktų"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/prideti_draug"
+        android:layout_below="@+id/seim"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp" />
+
+
+
+</RelativeLayout>

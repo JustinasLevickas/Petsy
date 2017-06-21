@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="android.app.petsy.Fragments.SearchFragment"
+    android:paddingTop="8dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp">
+
+    <!-- TODO: Update blank fragment layout -->
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/paieska_field"
+        android:layout_alignBaseline="@+id/searchButton"
+        android:layout_alignParentStart="true"
+        android:maxEms="10"
+        android:hint="Dog's name"
+        android:layout_toStartOf="@+id/searchButton" />
+
+
+
+    <ImageButton
+        app:srcCompat="@android:drawable/ic_search_category_default"
+        android:id="@+id/searchButton"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/button_background2"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchButton"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="17dp"
+        android:id="@+id/paieska_list"
+        android:headerDividersEnabled="false" />
+
+</RelativeLayout>

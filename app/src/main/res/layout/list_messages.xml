@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/dog"
+            android:id="@+id/imageView"
+            android:visibility="gone" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/message_text"
+            android:textStyle="normal|bold"
+            android:background="@drawable/message_right"
+            android:padding="4dp"
+            android:layout_margin="5dp" />
+
+        <Space
+            android:layout_height="match_parent"
+            android:layout_width="50dp" />
+
+</LinearLayout>

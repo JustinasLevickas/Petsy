@@ -1,0 +1,218 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+tools:context="android.app.petsy.Fragments.ProfileDialogFragment"
+android:orientation="vertical"
+    android:id="@+id/main_layout"
+    android:padding="10dp"
+    android:layout_centerHorizontal="false"
+    android:layout_centerVertical="false"
+    android:layout_gravity="center">
+
+<!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:text="TITLE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleText"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:background="@color/titleColor"
+        android:textAllCaps="true"
+        android:layout_marginBottom="12dp" />
+
+    <LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/dogFoto"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="bottom">
+
+        <TextView
+            android:text="Added contact"
+            android:layout_height="wrap_content"
+            android:id="@+id/infoText"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="5dp"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:background="@color/titleColor"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp" />
+
+        <Button
+            android:text="Write"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/writeButton"
+            android:background="@drawable/button_background2"
+            android:layout_gravity="bottom|center"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textColor="?android:attr/textColorTertiary"
+            android:visibility="gone" />
+
+        <Button
+            android:text="Add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addButton"
+            android:layout_weight="1"
+            android:layout_gravity="bottom|center"
+            style="@style/buttonStyle"
+            android:background="@drawable/button_background2"
+            android:textColor="?android:attr/textColorTertiary" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="25dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:text="Breed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView15"
+                android:layout_weight="1" />
+
+            <TextView
+                android:text="TextViewgcgbcbvcbcbvcbbcb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/petBreed"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="2" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:text="Age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView16"
+                android:layout_weight="1" />
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/petAge"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="2" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:text="Gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView18"
+                android:layout_weight="1" />
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/petGender"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="2" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:text="Owner's name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4"
+                android:layout_weight="1" />
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ownerName"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="2" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Email"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView6"
+                android:layout_weight="1" />
+
+            <TextView
+                android:text="nbvnbvnbvbvnbvnboooooo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/email"
+                android:layout_weight="2"
+                android:layout_marginLeft="20dp"
+                android:maxWidth="12dp" />
+        </TableRow>
+
+    </TableLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="Delete"
+            android:layout_height="wrap_content"
+            android:id="@+id/deleteButton"
+            android:background="@drawable/button_background2"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textColor="?android:attr/textColorTertiary"
+            android:layout_width="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:layout_marginTop="15dp"
+            android:visibility="gone" />
+    </FrameLayout>
+
+
+</LinearLayout>

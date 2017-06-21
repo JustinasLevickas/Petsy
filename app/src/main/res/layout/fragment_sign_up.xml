@@ -1,0 +1,252 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="android.app.petsy.Fragments.SignUpFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:focusableInTouchMode="true"
+            android:id="@+id/main_layout">
+
+            <TextView
+                android:text="Pet's name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewPetName"
+                android:layout_gravity="center"
+                android:textSize="24sp"
+                android:layout_marginTop="15dp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/petsName"
+                android:maxLength="15"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:inputType="textNoSuggestions|textFilter"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:minEms="5"
+                android:layout_marginBottom="20dp" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/field_style"
+                android:layout_gravity="center"
+                android:padding="15dp"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/breedField">
+
+                <TextView
+                    android:text="Breed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewBreed"
+                    android:textSize="24sp"
+                    android:gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_gravity="center" />
+
+                <CheckBox
+                    android:text="CrossBreed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/crossBreed"
+                    android:textSize="14sp"
+                    android:textColor="?android:attr/textColorTertiary"
+                    android:gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:text="Type bread"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewTypeBreed" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/textViewMail">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/image"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical|center" />
+
+                    <AutoCompleteTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/autoBreed"
+                        android:dropDownWidth="match_parent"
+                        android:maxLength="35"
+                        android:maxLines="2"
+                        android:layout_weight="1"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:inputType="textNoSuggestions|textFilter"
+                        android:minEms="5" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gender"
+                android:checkedButton="@+id/male"
+                android:layout_gravity="center"
+                android:background="@drawable/field_style"
+                android:padding="15dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:text="Gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewGender"
+                    android:layout_weight="1"
+                    android:textSize="24sp"
+                    android:layout_marginBottom="5dp" />
+
+                <RadioButton
+                    android:text="Male"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/male"
+                    android:layout_weight="1"
+                    android:textColor="?android:attr/textColorTertiary" />
+
+                <RadioButton
+                    android:text="Female"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/female"
+                    android:layout_weight="1"
+                    android:textColor="?android:attr/textColorTertiary" />
+
+
+            </RadioGroup>
+
+            <TextView
+                android:text="Age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewAge"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textSize="24sp"
+                android:layout_marginBottom="5dp" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Age"
+                android:entries="@array/ageList"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:text="Owner's name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewOwnerName"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textSize="24sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ownersName"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:inputType="textNoSuggestions|textFilter"
+                android:maxLength="15"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:minEms="5"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:text="Email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                android:textSize="24sp"
+                android:gravity="center" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textNoSuggestions|textEmailAddress|textFilter"
+                android:id="@+id/email"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@.0123456789"
+                android:maxLength="30"
+                android:layout_gravity="center"
+                android:ems="15"
+                android:textAlignment="center"
+                android:minEms="10"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:text="Password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewPassword"
+                android:layout_gravity="center"
+                android:textSize="24sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textNoSuggestions|textPassword|textFilter"
+                android:id="@+id/password"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+                android:maxLength="15"
+                android:layout_gravity="center"
+                android:ems="15"
+                android:textAlignment="center"
+                android:minEms="5"
+                android:layout_marginBottom="20dp" />
+
+            <CheckBox
+                android:text="Keep me signed in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/stay"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:textColor="?android:attr/textColorTertiary"
+                android:layout_marginBottom="20dp" />
+
+            <Button
+                android:text="Sign up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/signUp"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-medium"
+                style="@style/buttonStyle"
+                android:layout_marginBottom="25dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
