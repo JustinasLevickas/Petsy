@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements MainPageView.OnFr
     SharedPreferences autoSignIn = null;
     User user = null;
     User chatUser = null;
-    private int REQUEST_CAMERA = 0, SELECT_FILE = 1;
+    private final int REQUEST_CAMERA = 0, SELECT_FILE = 1;
     private String userChoosenTask;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
