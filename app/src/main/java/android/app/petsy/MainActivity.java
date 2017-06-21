@@ -265,8 +265,8 @@ public class MainActivity extends AppCompatActivity implements MainPageView.OnFr
             result = Bitmap.createBitmap(result, 10, 200, 400, 400);
         }
         return getCroppedBitmap(result);
-       // return result;
     }
+
     public Bitmap getCroppedBitmap(Bitmap bitmap) {
         Bitmap output = Bitmap.createBitmap(bitmap.getWidth(),
                 bitmap.getHeight(), Bitmap.Config.ARGB_8888);
@@ -279,13 +279,11 @@ public class MainActivity extends AppCompatActivity implements MainPageView.OnFr
         paint.setAntiAlias(true);
         canvas.drawARGB(0, 0, 0, 0);
         paint.setColor(color);
-        // canvas.drawRoundRect(rectF, roundPx, roundPx, paint);
         canvas.drawCircle(bitmap.getWidth() / 2, bitmap.getHeight() / 2,
                 bitmap.getWidth() / 2, paint);
         paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
         canvas.drawBitmap(bitmap, rect, rect, paint);
-        //Bitmap _bmp = Bitmap.createScaledBitmap(output, 60, 60, false);
-        //return _bmp;
+
         return output;
     }
 
@@ -307,6 +305,7 @@ public class MainActivity extends AppCompatActivity implements MainPageView.OnFr
                                 user.setProfileFoto(foto);
                                 reloadFoto();
                                 Toast.makeText(getApplicationContext(), "Successfully uploaded", Toast.LENGTH_LONG).show();
+                                updateUserFotoDatabase();
 
                             }
                         }
@@ -320,6 +319,24 @@ public class MainActivity extends AppCompatActivity implements MainPageView.OnFr
 
     }
 
+    public void updateUserFotoDatabase(){
+        AsyncHttpClient client = new AsyncHttpClient();
+        RequestParams params = new RequestParams();
+        params.put("ID", user.getId());
+        client.get("http://serveris.hol.es/setFotoTrue.php", params, new TextHttpResponseHandler() {
+                    @Override
+                    public void onSuccess(int statusCode, Header[] headers, String str) {
+                        // called when response HTTP status is "200 OK"
+                        Log.i("ats",str);
+                    }
+
+                    @Override
+                    public void onFailure(int statusCode, Header[] headers, String res, Throwable t) {
+                        // called when response HTTP status is "4XX" (eg. 401, 403, 404)
+                    }
+                }
+        );
+    }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
